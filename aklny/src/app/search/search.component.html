@@ -1,7 +1,34 @@
-<form id="content">
-  <input type="text" name="input" class="input" [(ngModel)]="akla">
+<div id="wrap">
+<form action="" autocomplete="on">
+  <!-- <input type="text" name="input" class="input" [(ngModel)]="akla">
   <button type="reset" class="search" (click)="expand()"></button>
+  <button class="btn btn-primary" (click)="onSearch()" >Dawrly</button> -->
+  <input id="search" name="search" type="text"  [(ngModel)]="akla" placeholder="What're we looking for ?">
+  <input id="search_submit" value="Rechercher" type="submit">
+  <br/>
+  <br/>
+  <br/>
   <button class="btn btn-primary" (click)="onSearch()" >Dawrly</button>
-  <p>{{ akla }}</p>
- 
+  <!-- <p  *ngFor="let x of recipeDet" >{{x.name}} with a calorie of {{ x.calories }}</p> -->
+  <div *ngFor="let x of recipeDet" class="card" style="width: 18rem;">
+    <img class="card-img-top" src= "{{ x.image }}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ x.name }}</h5>
+      <p  class="card-text">{{ x.ingredient }} </p>
+    
+      <p  class="card-text"> Calories: {{ x.calories }} </p>
+    </div>
+    <!-- <ul class="list-group list-group-flush">
+      <li class="list-group-item">Cras justo odio</li>
+      <li class="list-group-item">Dapibus ac facilisis in</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+    </ul> -->
+    <div class="card-body">
+      <a href="{{ x.url }}" class="card-link">Recipe Link</a>
+      <button type="button" class="btn btn-outline-danger">Send url mail</button>
+    </div>
+  </div>
 </form>
+ 
+
+

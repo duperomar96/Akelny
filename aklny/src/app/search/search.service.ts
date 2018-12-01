@@ -15,7 +15,7 @@ export class SearchService {
 
   constructor(private http: Http) { }
 
-  getRecipe(ing: any) {
+  getRecipe(ing) {
     return this.http.get('https://api.edamam.com/search?q=' + ing + '&app_id=90513d02&app_key=2e52e904fa3a8d0a171512ef02e05ec4')
     .map(
       (recipe: Response) => {
@@ -23,6 +23,8 @@ export class SearchService {
         // for (const server of data) {
         //   server.name = 'FETCHED_' + server.name;
         // }
+        console.log('galy' + ing);
+       // console.log(data);
         return data;
       }
     )
