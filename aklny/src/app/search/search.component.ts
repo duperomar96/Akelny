@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
     name: 'Aklny',
     calories: 'Just enough',
     ingredient: [],
-    image: '',
+    image: '../../assets/hungry.jpg',
     url: ''
   }];
   // recipe: Recipe;
