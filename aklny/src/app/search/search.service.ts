@@ -5,6 +5,7 @@ import 'rxjs/Rx';
 // import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 
 import { Observable } from 'rxjs/observable';
+import { environment } from '../../environments/environment';
 // import {_throw} from 'rxjs/observable/throw';
 // import { catchError, retry } from 'rxjs/operators';
 
@@ -33,6 +34,14 @@ export class SearchService {
         return Observable.throw('Something went wrong');
       }
     );
+}
+
+sendMail(email: string) {
+  console.log(email);
+  const data = {email: email};
+  const headers = new Headers({'Content-Type': 'application/json'});
+console.log(data.email);
+  return this.http.post(environment.apiUrl + 'user/sendEmail', data, {headers: headers} );
 }
 
 
