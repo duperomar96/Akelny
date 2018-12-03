@@ -1,7 +1,7 @@
 # Aklny	
  ## Aim of the project
 		
- This is a simple recipe book application to help people find different recipes and calorie intake		 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
+ This is a simple recipe book application to help people find different recipes and calorie intake
 		
 ## Development server
 		
