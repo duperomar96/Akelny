@@ -11,15 +11,15 @@ var x = '';
 // var smtpTransport = require('nodemailer-smtp-transport');
 
 module.exports.sendEmail = function (req, res, next) {
-  
-  console.log(req.body.email);         
+  // x=req.body.email;
+   console.log(req.body.email);         
   const sgMail = require('@sendgrid/mail');
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
     to: req.body.email,
     from: 'aklnyYala@aklny.com',
-    subject: 'Sending with SendGrid is Fun',
-    text: 'and easy to do anywhere, even with Node.js',
+    subject: 'Aklny hatshaba3ak',
+    text: 'Edetak ingredients w recipe kamel enta ba2a',
     html: '<strong>and easy to do anywhere, even with Node.js</strong>',
   };
   console.log("hena2");

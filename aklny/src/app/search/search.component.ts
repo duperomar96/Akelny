@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { SearchService } from './search.service';
 import { UrlResolver } from '@angular/compiler';
-import { config } from 'process';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -11,7 +10,6 @@ import { config } from 'process';
 export class SearchComponent implements OnInit {
   akla = '';
   email = '';
-  link = '';
   aklaGahza = false;
   error: any;
   recipe: any;
@@ -19,18 +17,9 @@ export class SearchComponent implements OnInit {
     name: 'Aklny',
     calories: 'Just enough',
     ingredient: [],
-    image: '../../assets/hungry.jpg' ,
+    image: '../../assets/hungry.jpg',
     url: ''
   }];
-  state = {
-    email: {
-      recipient: '',
-      sender: '',
-      subject: '',
-      text: ''
-    }
-  };
-
   // recipe: Recipe;
   constructor(private searchService: SearchService) {}
 
@@ -82,8 +71,7 @@ export class SearchComponent implements OnInit {
 
         // });
   }
-
-  onEmail(email, link) {
+  onEmail(email) {
     // var data = {email:user.email};
     // link = document.getElementById('link').textContent;
   //  this.link = document.getElementById('link').textContent;

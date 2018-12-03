@@ -4,8 +4,9 @@ import { Headers, Http, Response } from '@angular/http';
 import 'rxjs/Rx';
 // import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 
-import { Observable } from 'rxjs/observable';
+//import { Observable } from 'rxjs/observable';
 import { environment } from '../../environments/environment';
+
 // import {_throw} from 'rxjs/observable/throw';
 // import { catchError, retry } from 'rxjs/operators';
 
@@ -16,7 +17,7 @@ export class SearchService {
 
   constructor(private http: Http) { }
 
-  getRecipe(ing) {
+  getRecipe(ing: any) {
     return this.http.get('https://api.edamam.com/search?q=' + ing + '&app_id=90513d02&app_key=2e52e904fa3a8d0a171512ef02e05ec4')
     .map(
       (recipe: Response) => {
@@ -24,14 +25,13 @@ export class SearchService {
         // for (const server of data) {
         //   server.name = 'FETCHED_' + server.name;
         // }
-        console.log('galy' + ing);
-       // console.log(data);
         return data;
       }
     )
     .catch(
       (error: Response) => {
-        return Observable.throw('Something went wrong');
+        //return Observable.throw('Something went wrong');
+        return null;
       }
     );
 }
@@ -43,7 +43,5 @@ sendMail(email: string) {
 console.log(data.email);
   return this.http.post(environment.apiUrl + 'user/sendEmail', data, {headers: headers} );
 }
-
-
 
 }
