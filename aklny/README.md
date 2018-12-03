@@ -1,55 +1,27 @@
 # Aklny
 
-This is a simple recipe book application to help people find different recipes and calorie intake
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
-## Aim of the project
+## Development server
 
-* The project is applying some of the 12 factors 
-* In this project you will find the following factors:
-  * ReadMe In this private repositry you can find available clarifying how to use ou project and modifying in locally
-  * Codebase our private repo was constantly updated with any code changes to the project 
-  * Dependencies
-   * In this project the node package manager called NPM 
-   * To declare dependencies of an app 
-  * Config
-   * A seperate config file is created when running the application to avoid hardcoding you can see below in the README how to create it and it's content
-  * Build,Run, Release
-   * Our application contains a docker file run of the application explaining the docker file config
-## Prerequisites
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-* The major prerequisite needed is docker install
+## Code scaffolding
 
-## Built With
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-* MEAN Stack:
- * Mongodb
- * Express
- * Angular
- * Node
- 
-## Backing services used
+## Build
 
-* Edammam API containing the ingredients, calories and recipes link
-* SendGrid API to send emails
-* Mongodb 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## How to use the project
+## Running unit tests
 
-* Create a config file
-* export the following url in it: mongodb://localhost:27017/nodejs-to-do
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Run in Docker
+## Running end-to-end tests
 
-* docker-compose up
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Teardown in Docker
+## Further help
 
-* docker-compose down
-
-## To rebuild 
-* docker-compose build
-
-# Developers
-
-### Omar Ehab Khairy 37-3439
-### Omar Hossam ElToukhy 37-0394
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
