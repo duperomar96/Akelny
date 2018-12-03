@@ -20,7 +20,7 @@
 
 ## Prerequisites		
 		
- * The major prerequisite needed is docker install		 
+ * The major prerequisite needed is docker installed		 
 		
  ## Built With
 		
@@ -32,7 +32,7 @@
   		
  ## Backing services used		
 		
- * Edammam API containing the ingredients, calories and recipes link		 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+ * Edammam API containing the ingredients, calories and recipes link		 
  * SendGrid API to send emails		
  * Mongodb 		
 		
